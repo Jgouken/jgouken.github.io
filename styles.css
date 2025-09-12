@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Pixel-Font';
+    src: url('https://jgouken.github.io/PRToolVersionCheck/RD%20Pixel%20Font/rhythm-doctor-pixel-font.otf.woff2') format('woff2');
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+    background-color: black;
+}
+
+.headerBack {
+    position: absolute;
+    width: 100vw;
+    height: 96vh;
+    left: 0;
+    color: white;
+    background-color: rgb(27, 0, 0);
+}
+
+.groundline {
+    position: absolute;
+    bottom: 11.7vh;
+    width: 100vw;
+    left: 0;
+    height: 1vh;
+    text-align: center;
+    z-index: 1;
+    background-color: rgb(26, 156, 0);
+}
+
+.groundbg {
+    position: absolute;
+    top: 88.3vh;
+    bottom: 0;
+    width: 100vw;
+    height: 120vh;
+    left: 0;
+    text-align: center;
+    background-color: rgb(100, 57, 0);
+}
+
+.fullName {
+    position: relative;
+    text-align: center;
+    top: 30vh;
+    font-family: 'Pixel-Font';
+    font-size: 14vw;
+}
+
+.arrow {
+    width: 200px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    transform: rotate(-240deg);
+    opacity: 0;
+}
