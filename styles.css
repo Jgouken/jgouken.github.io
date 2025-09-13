@@ -47,10 +47,25 @@ html {
     position: fixed;
     text-align: center;
     top: 30vh;
-    left: 15%;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
     font-family: 'Pixel-Font';
     font-size: 14vw;
+}
+
+.tapScreen {
+    position: fixed;
+    text-align: center;
+    top: 60vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    font-family: 'Pixel-Font';
+    font-size: 3vw;
+    @media (orientation: portrait) {
+        font-size: 4vw;
+    }
 }
 
 .arrow {
@@ -81,10 +96,11 @@ html {
     z-index: 2;
     right: 0;
     top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     @media (orientation: portrait) {
         width: 50vh;
         height: 50vh;
-        right: -15%;
     }
 }
 
@@ -100,5 +116,8 @@ html {
     @media (orientation: portrait) {
         width: 40vh;
         height: 40vh;
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
     }
 }

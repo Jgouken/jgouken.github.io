@@ -2,6 +2,15 @@ var i = 1;
 
 document.addEventListener('click', function (event) {
     launchArrowWithTrajectory(event.clientX, event.clientY);
+
+    var tapScreen = document.getElementById(`tapScreen`)
+    if (!tapScreen) return;
+
+    var fadeOut = setInterval(fade, 10);
+    function fade() {
+        if (tapScreen.style.opacity <= 0) { clearInterval(fadeOut); tapScreen.style.display = 'none'; }
+        tapScreen.style.opacity -= 0.01
+    }
 });
 
 function rain() {
