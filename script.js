@@ -1,12 +1,22 @@
 var i = 1;
 
 document.addEventListener('click', function (event) {
-    launchArrow(event.clientX, event.clientY)
+    const ground = document.getElementById('groundLine');
+    const groundRect = ground.getBoundingClientRect();
+
+    const arr = document.getElementById(`arrow${i}`);
+    const arrowRect = arr.getBoundingClientRect();
+
+    const yDocument = groundRect.top + window.scrollY - (arrowRect.height / 1.65);
+
+    launchArrow(event.clientX, event.clientY, yDocument)
 });
 
-setInterval(() => {launchArrow(Math.random() * window.innerWidth, Math.random() * 700)}, Math.random() * 2000)
+function rain() {
+    setInterval(() => { launchArrow(Math.random() * window.innerWidth, Math.random() * 700, window.innerHeight) }, 500)
+}
 
-function launchArrow(clientX, clientY) {
+function launchArrow(clientX, clientY, bottomY) {
     if (i > 10) i = 1
 
     if (i > 5) var oldArrow = document.getElementById(`arrow${i - 5}`)
@@ -27,15 +37,19 @@ function launchArrow(clientX, clientY) {
 
     elem.style.left = x + 'px';
     elem.style.top = y + 'px';
-    elem.style.opacity = 1;
+    elem.style.opacity = bottomY == window.innerHeight ? .25 : 1;
+    elem.style.width = bottomY == window.innerHeight ? '5vw' : '10vw'
+    elem.style.zIndex = bottomY == window.innerHeight ? 0 : 1
 
-    var land = setInterval(frame, 10); // Call 'frame' every 10 milliseconds
+    var land = setInterval(frame, 10);
 
     function frame() {
-        if (y >= window.innerHeight * .75) clearInterval(land)
         elem.style.top = (y + speed) + 'px';
         elem.style.left = (x - speed) + 'px';
+        if (y >= bottomY) clearInterval(land)
         y += speed * 2
         x -= speed
     }
 }
+
+rain()

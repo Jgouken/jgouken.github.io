@@ -9,7 +9,7 @@
 
 html {
     background-color: black;
-}
+} 
 
 .headerBack {
     position: absolute;
@@ -17,17 +17,17 @@ html {
     height: 96vh;
     left: 0;
     color: white;
+    z-index: 0;
     background-color: rgb(27, 0, 0);
 }
 
-.groundline {
+.groundLine {
     position: absolute;
     bottom: 11.7vh;
     width: 100vw;
     left: 0;
     height: 1vh;
-    text-align: center;
-    z-index: 1;
+    z-index: 3;
     background-color: rgb(26, 156, 0);
 }
 
@@ -38,6 +38,7 @@ html {
     width: 100vw;
     height: 120vh;
     left: 0;
+    z-index: 1;
     text-align: center;
     background-color: rgb(100, 57, 0);
 }
@@ -46,15 +47,24 @@ html {
     position: relative;
     text-align: center;
     top: 30vh;
+    z-index: 1;
     font-family: 'Pixel-Font';
     font-size: 14vw;
 }
 
 .arrow {
-    width: 200px;
+    width: 10vw;
     position: absolute;
     overflow: hidden;
     top: 0;
+    z-index: 0;
     transform: rotate(-240deg);
     opacity: 0;
+}
+
+.githubSection {
+    color: white;
+    position: absolute;
+    top: 100vh;
+    z-index: 1;
 }

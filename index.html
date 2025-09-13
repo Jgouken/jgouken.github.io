@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaiden Johnson</title>
+    <title>Jgouken</title>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- https://alpinejs.dev/ is the JS framework in use. I'm also using the 'persist' plugin to keep your config inputs. -->
+    <script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/alpinejs@^3.x.x" defer></script>
     <script src="script.js"></script>
 </head>
 
@@ -23,8 +27,32 @@
         <img class="arrow" id="arrow9" src="Arrow.png">
         <img class="arrow" id="arrow10" src="Arrow.png">
     </div>
-    <div class="groundline"></div>
+    <div class="groundLine" id="groundLine"></div>
     <div class="groundbg"></div>
+
+    <div class="githubSection">
+        <img src="https://github.com/jgouken.png" alt="Jgouken GitHub Profile Photo" class="profile-photo">
+
+        <style>
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 10px solid #000;
+            display: block;
+            margin: 0 auto 24px auto;
+            text-align: center;
+        }
+        @media (min-width: 600px) {
+            .profile-photo {
+            width: 240px;
+            height: 240px;
+            float: left;
+            margin: 0 32px 32px 0;
+            }
+        }
+        </style>
+    </div>
 </body>
 
 </html>
