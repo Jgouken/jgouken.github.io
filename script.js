@@ -31,14 +31,14 @@ function launchArrowWithTrajectory(clickX, clickY, bottomY) {
     const arrow = document.getElementById(`arrow${i}`);
 
     const startX = clickX + (Math.random() * 100) - (Math.random() * 100);
-    const startY = -50;
+    const startY = -100;
     const throughX = clickX - 80;
     const throughY = clickY;
 
     const groundRect = ground.getBoundingClientRect();
     const arrowWidth = arrow.offsetWidth || 0;
     const endY = bottomY !== undefined ? bottomY : (groundRect.top + window.scrollY - (arrowWidth / 2.2));
-    
+
     // Calculate the direction vector from start to through point
     const dx = throughX - startX;
     const dy = throughY - startY;
@@ -92,5 +92,11 @@ function launchArrowWithTrajectory(clickX, clickY, bottomY) {
 
     i = i >= 10 ? 1 : i + 1;
 }
+
+setInterval(() => {
+    const name = document.getElementById(`fullName`);
+
+    name.style.opacity = 1 - window.scrollY / (window.innerHeight / 1.75);
+}, 10);
 
 rain()

@@ -15,7 +15,7 @@
 
 <body>
     <div class="headerBack" id="playArea">
-        <div class="fullName">JGOUKEN</div>
+        <div class="fullName" id="fullName">JGOUKEN</div>
         <img class="arrow" id="arrow1" src="Arrow.png">
         <img class="arrow" id="arrow2" src="Arrow.png">
         <img class="arrow" id="arrow3" src="Arrow.png">
@@ -27,34 +27,17 @@
         <img class="arrow" id="arrow9" src="Arrow.png">
         <img class="arrow" id="arrow10" src="Arrow.png">
     </div>
-    
+
     <div class="groundbg" id="groundbg">
         <div class="groundLine" id="groundLine"></div>
     </div>
 
-    <div class="githubSection">
-        <img src="https://github.com/jgouken.gif" alt="Jgouken GitHub Profile Photo" class="profile-photo">
-
-        <style>
-        .profile-photo {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 10px solid #000;
-            display: block;
-            margin: 0 auto 24px auto;
-            text-align: center;
-        }
-        @media (min-width: 600px) {
-            .profile-photo {
-            width: 240px;
-            height: 240px;
-            float: left;
-            margin: 0 32px 32px 0;
-            }
-        }
-        </style>
-    </div>
+    <div class="githubSection" style="display: flex;">
+        <div class="profile-photo-container">
+            <div class="profile-photo-background">
+                <img src="jgouken.gif" alt="Jgouken GitHub Profile Photo" class="profile-photo">
+            </div>
+        </div>
 </body>
 
 </html>
