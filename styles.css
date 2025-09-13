@@ -23,7 +23,7 @@ html {
 
 .groundLine {
     position: absolute;
-    bottom: 11.7vh;
+    top: 0;
     width: 100vw;
     left: 0;
     height: 1vh;
