@@ -16,7 +16,7 @@ document.addEventListener('click', function (event) {
 function rain() {
     setInterval(() => {
         launchArrowWithTrajectory(Math.random() * window.innerWidth, Math.random() * 700, window.innerHeight);
-        const arrow = document.getElementById(`arrow${i === 1 ? 10 : i - 1}`);
+        const arrow = document.getElementById(`arrow${i === 1 ? 20 : i - 1}`);
         if (arrow) {
             arrow.style.width = '5vw';
             arrow.style.opacity = 0.25;
@@ -26,8 +26,8 @@ function rain() {
 }
 
 function launchArrowWithTrajectory(clickX, clickY, bottomY) {
-    if (i > 5) var oldArrow = document.getElementById(`arrow${i - 5}`)
-    else var oldArrow = document.getElementById(`arrow${i + 5}`)
+    if (i > 10) var oldArrow = document.getElementById(`arrow${i - 10}`)
+    else var oldArrow = document.getElementById(`arrow${i + 10}`)
     if (!oldArrow) return;
     var fadeOut = setInterval(fade, 10);
 
@@ -99,7 +99,7 @@ function launchArrowWithTrajectory(clickX, clickY, bottomY) {
         }
     }, 10);
 
-    i = i >= 10 ? 1 : i + 1;
+    i = i >= 20 ? 1 : i + 1;
 }
 
 setInterval(() => {

@@ -9,6 +9,7 @@
 
 html {
     background-color: black;
+    overflow-x: hidden;
 } 
 
 .headerBack {
@@ -29,6 +30,7 @@ html {
     height: 1vh;
     z-index: 3;
     background-color: rgb(26, 156, 0);
+    overflow-x: hidden;
 }
 
 .groundbg {
@@ -41,6 +43,7 @@ html {
     z-index: 1;
     text-align: center;
     background-color: rgb(100, 57, 0);
+    overflow-x: hidden;
 }
 
 .fullName {
@@ -71,11 +74,11 @@ html {
 .arrow {
     width: 10vw;
     position: absolute;
-    overflow: hidden;
     top: 0;
     z-index: 0;
     transform: rotate(-240deg);
     opacity: 0;
+    overflow: hidden;
 }
 
 .githubSection {
@@ -98,6 +101,7 @@ html {
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
+    overflow-x: hidden;
     @media (orientation: portrait) {
         width: 50vh;
         height: 50vh;
