@@ -20,6 +20,7 @@ html {
     color: white;
     z-index: 0;
     background-color: rgb(27, 0, 0);
+    user-select: none;
 }
 
 .groundLine {
@@ -31,6 +32,7 @@ html {
     z-index: 3;
     background-color: rgb(26, 156, 0);
     overflow-x: hidden;
+    user-select: none;
 }
 
 .groundbg {
@@ -44,6 +46,7 @@ html {
     text-align: center;
     background-color: rgb(100, 57, 0);
     overflow-x: hidden;
+    user-select: none;
 }
 
 .fullName {
@@ -55,6 +58,7 @@ html {
     z-index: 1;
     font-family: 'Pixel-Font';
     font-size: 14vw;
+    user-select: none;
 }
 
 .tapScreen {
@@ -66,6 +70,7 @@ html {
     z-index: 1;
     font-family: 'Pixel-Font';
     font-size: 3vw;
+    user-select: none;
     @media (orientation: portrait) {
         font-size: 4vw;
     }
@@ -79,49 +84,23 @@ html {
     transform: rotate(-240deg);
     opacity: 0;
     overflow: hidden;
+    user-select: none;
 }
 
-.githubSection {
+.introduction {
     color: white;
     position: absolute;
     top: 100vh;
+    width: 90vw;
     z-index: 1;
-    @media (orientation: portrait) {
-        width: 50vh;
-        height: 50vh;
-    }
-}
-
-.profile-photo {
-    position: absolute;
-    width: 25vh;
-    height: 25vh;
-    z-index: 2;
-    right: 0;
-    top: 10%;
+    text-align: center;
     left: 50%;
     transform: translateX(-50%);
-    overflow-x: hidden;
+    z-index: 1;
+    font-family: 'Pixel-Font';
+    font-size: 8vw;
     @media (orientation: portrait) {
         width: 50vh;
         height: 50vh;
-    }
-}
-
-.profile-photo-background {
-    position: absolute;
-    width: 25vh;
-    height: 25vh;
-    margin-left: 2vw;
-    margin-top: 2vh;
-    background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
-    border-radius: 50%;
-    text-align: center;
-    @media (orientation: portrait) {
-        width: 40vh;
-        height: 40vh;
-        left: 50%;
-        transform: translateX(-50%);
-        right: auto;
     }
 }
