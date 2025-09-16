@@ -40,7 +40,7 @@ html {
     top: 88.3vh;
     bottom: 0;
     width: 100vw;
-    height: 120vh;
+    height: 130vh;
     left: 0;
     z-index: 1;
     text-align: center;
@@ -107,7 +107,7 @@ html {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0vw; 
+    gap: 5vw; 
     max-width: 90vw;
     margin: 0 auto;
     justify-items: center;
@@ -121,7 +121,22 @@ html {
   height: 100vh;
 }
 
-@media (orientation: portrait) {
+.grid-item {
+    position: relative;
+    width: 50vh;
+    height: 28vh;
+    margin: 0vh;
+    overflow: hidden;
+    border: 0.5vh solid white;
+    border-radius: 1vh;
+}
+
+.text {
+    font-family: 'Pixel-Font';
+    z-index: 1;
+}
+
+@media (max-width: 1500px) {
   .grid-container {
     grid-template-columns: repeat(1, 1fr); /* Single column on smaller screens */
   }
