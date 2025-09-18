@@ -45,7 +45,7 @@ html {
     top: 88.3vh;
     bottom: 0;
     width: 100vw;
-    height: 32vh;
+    height: 30vh;
     left: 0;
     z-index: 1;
     text-align: center;
@@ -220,6 +220,18 @@ html {
         margin-left: 0%;
         transform: scaleY(-1);
     }
+}
+
+.hover-link {
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0);
+    color: white;
+    transition: text-decoration-color .3s ease;
+}
+
+.hover-link:hover {
+    text-decoration-color: rgb(255, 255, 255);
+    transition: text-decoration-color .3s ease;
 }
 
 .vw5 {
