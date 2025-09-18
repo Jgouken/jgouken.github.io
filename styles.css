@@ -158,6 +158,7 @@ html {
     background-size: cover;
     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('/images/rhythmdoctor.png');
     background-position: center center;
+
     @media (orientation: portrait) {
         transform: scaleY(-1);
     }
@@ -213,6 +214,7 @@ html {
 
 .vw5 {
     font-size: 5vw;
+
     @media (orientation: portrait) {
         font-size: 4vh;
     }
@@ -221,6 +223,7 @@ html {
 .vw2p5 {
     font-size: 2.5vw;
     line-height: 4vw;
+
     @media (orientation: portrait) {
         font-size: 3vh;
         line-height: 7vw;
@@ -230,8 +233,19 @@ html {
 .vw1p25 {
     font-size: 1.25vw;
     line-height: 2vw;
+
     @media (orientation: portrait) {
         font-size: 2vh;
-         line-height: 4vw;
+        line-height: 6vw;
+    }
+}
+
+.vw1 {
+    font-size: 1vw;
+    line-height: 2vw;
+
+    @media (orientation: portrait) {
+        font-size: 1.75vh;
+        line-height: 5vw;
     }
 }
