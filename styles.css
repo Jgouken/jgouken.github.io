@@ -137,7 +137,7 @@ html {
     @media (orientation: portrait) {
         grid-template-columns: none;
         grid-template-rows: 1fr 1fr;
-        height: 80vw;
+        height: 100vw;
         justify-items: center;
         align-items: center;
         display: flex;
