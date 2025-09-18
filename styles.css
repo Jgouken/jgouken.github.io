@@ -45,7 +45,7 @@ html {
     top: 88.3vh;
     bottom: 0;
     width: 100vw;
-    height: 29vh;
+    height: 32vh;
     left: 0;
     z-index: 1;
     text-align: center;
@@ -99,7 +99,7 @@ html {
     color: white;
     position: absolute;
     top: 100vh;
-    width: 120vw;
+    width: 100vw;
     z-index: 0;
     text-align: center;
     left: 50%;
@@ -108,8 +108,7 @@ html {
     font-size: 5vw;
 
     @media (orientation: portrait) {
-        width: 50vh;
-        height: 50vh;
+        top: 110vh;
     }
 }
 
@@ -122,26 +121,117 @@ html {
     overflow-x: hidden;
 }
 
+.video-showcase-reverse {
+    @media (orientation: portrait) {
+        transform: scaleY(-1);
+    }
+}
+
+.carousel-introduction {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2vw;
+    overflow: hidden;
+
+    @media (orientation: portrait) {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        height: 80vw;
+        justify-items: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
 .carousel-introduction1 {
     background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('/images/jam.png');
-    background-position: center center; 
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 1)), url('/images/jam.png');
+    background-position: center center;
 }
 
 .carousel-introduction2 {
     background-size: cover;
     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('/images/rhythmdoctor.png');
-    background-position: center center; 
+    background-position: center center;
+    @media (orientation: portrait) {
+        transform: scaleY(-1);
+    }
 }
 
 .carousel-introduction3 {
     background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('/images/blackroyaltybanner.jpg');
-    background-position: center center; 
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 1)), url('/images/blackroyaltybanner.jpg');
+    background-position: center center;
 }
 
 .carousel-video {
     aspect-ratio: 16 / 9;
-    width: 45vw;
     overflow: hidden;
+    width: 40vw;
+    height: 22vw;
+    display: block;
+    margin-left: 10%;
+
+    @media (orientation: portrait) {
+        margin-left: 0%;
+        width: 80vw;
+        height: 44vw;
+    }
+}
+
+.video-carousel-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: -10%;
+
+    @media (orientation: portrait) {
+        margin-left: 0%;
+    }
+}
+
+.video-carousel-text2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: 10%;
+
+    @media (orientation: portrait) {
+        margin-left: 0%;
+        transform: scaleY(-1);
+    }
+}
+
+.vw5 {
+    font-size: 5vw;
+    @media (orientation: portrait) {
+        font-size: 4vh;
+    }
+}
+
+.vw2p5 {
+    font-size: 2.5vw;
+    line-height: 4vw;
+    @media (orientation: portrait) {
+        font-size: 3vh;
+        line-height: 7vw;
+    }
+}
+
+.vw1p25 {
+    font-size: 1.25vw;
+    line-height: 2vw;
+    @media (orientation: portrait) {
+        font-size: 2vh;
+         line-height: 4vw;
+    }
 }
