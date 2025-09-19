@@ -6,19 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jgouken</title>
     <link rel="stylesheet" href="styles.css">
-
-    <!-- https://alpinejs.dev/ is the JS framework in use. I'm also using the 'persist' plugin to keep your config inputs. -->
-    <script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://unpkg.com/alpinejs@^3.x.x" defer></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="script.js"></script>
 </head>
 
 <body>
     <div>
         <div class="headerBack" id="playArea">
+            <div class="tapScreen" id="tapScreen" style="opacity: 0.5;">TAP/CLICK THE SCREEN</div>
             <div class="fullName" id="fullName">
                 JGOUKEN
-                <div class="tapScreen" id="tapScreen" style="opacity: 0.5;">TAP/CLICK THE SCREEN</div>
             </div>
             <img class="arrow" id="arrow1" src="/images/arrow.png">
             <img class="arrow" id="arrow2" src="/images/arrow.png">
@@ -46,18 +43,19 @@
             <div class="groundLine" id="groundLine"></div>
             <div class="groundLine2" id="groundLine2"></div>
         </div>
-        <div class="vw5"
-            style="z-index: 10; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: max-content; text-align: center; pointer-events: none; font-family: Pixel-Font; color: white; top: 101vh;">
-            HOBBIES</div>
+        <div class="vw5" x-text="new Date().getHours() < 12 ? 'Good Morning' : (new Date().getHours() < 18 ? 'Good Afternoon' : 'Good Evening')"
+            style="z-index: 10; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: max-content; text-align: center; pointer-events: none; font-family: Pixel-Font; color: white; top: 101vh;">WHY HELLO HELLO!</div>
 
         <div class="video-introduction" style="margin-top: 15vh;">
             <div class="carousel-introductions" style="display: grid; grid-template-rows: 1fr 1fr 1fr;">
                 <div class="carousel-introduction0 video-showcase carousel-introduction">
                     <div class="video-carousel-text2">
-                        <a class="vw5 hover-link" style="text-align: center;" href="https://glitchedlizard.itch.io/casino-casualty" target="_blank">CASINO CASUALTY</a>
+                        <a class="vw5 hover-link" style="text-align: center;"
+                            href="https://glitchedlizard.itch.io/casino-casualty" target="_blank">CASINO CASUALTY</a>
                         <span class="vw2p5" style="color: grey; text-align: center;">Voice Actor</span>
                         <br>
-                        <span class="vw1p25" style="text-align: center; width: 60%;">Voice Acted for CASINO CASUALTY, an FNAF-style indie horror title.</span>
+                        <span class="vw1p25" style="text-align: center; width: 60%;">Voice Acted for CASINO CASUALTY, a
+                            FNAF-style indie horror title.</span>
                     </div>
                     <iframe class="carousel-video video-showcase-reverse"
                         src="https://www.youtube.com/embed/n5hYEt1yBqc" frameborder="0" allowfullscreen></iframe>
@@ -66,7 +64,8 @@
                     <iframe class="carousel-video" src="https://www.youtube.com/embed/YiXUyxCH73o" frameborder="0"
                         allowfullscreen></iframe>
                     <div class="video-carousel-text">
-                        <a class="vw5 hover-link" style="text-align: center;" href="https://www.youtube.com/@jgmp3" target="_blank">JaM</a>
+                        <a class="vw5 hover-link" style="text-align: center;" href="https://www.youtube.com/@jgmp3"
+                            target="_blank">JaM</a>
                         <span class="vw2p5" style="color: grey; text-align: center;">Co-Producer</span>
                         <br>
                         <span class="vw1p25" style="text-align: center; width: 60%;">Electronic Dance Music Co-Producer
@@ -75,12 +74,17 @@
                 </div>
                 <div class="carousel-introduction2 video-showcase carousel-introduction">
                     <div class="video-carousel-text2">
-                        <a class="vw5 hover-link" style="text-align: center;" href="https://rhythmdr.com/" target="_blank">Rhythm Doctor</a>
+                        <a class="vw5 hover-link" style="text-align: center;" href="https://rhythmdr.com/"
+                            target="_blank">Rhythm Doctor</a>
                         <span class="vw2p5" style="color: grey; text-align: center;">Community Programmer</span>
                         <br>
                         <span class="vw1p25" style="text-align: center; width: 60%;">Custom Level Creator and Community
-                            Programmer for <a href="https://discord.com/invite/rhythmdr" target="_blank" style="color: white;">Rhythm Doctor's Discord Server</a> and <a href="https://rhythm.cafe/" target="_blank" style="color: white;">rhythm.cafe</a>.</span>
-                        <span class="vw1" style="text-align: center; width: 60%; color: gray;">* Not affiliated with Rhythm Doctor or 7BG.</span>
+                            Programmer for <a href="https://discord.com/invite/rhythmdr" target="_blank"
+                                style="color: white;">Rhythm Doctor's Discord Server</a> and <a
+                                href="https://rhythm.cafe/" target="_blank"
+                                style="color: white;">rhythm.cafe</a>.</span>
+                        <span class="vw1" style="text-align: center; width: 60%; color: gray;">* Not affiliated with
+                            Rhythm Doctor or 7BG.</span>
                     </div>
                     <iframe class="carousel-video video-showcase-reverse"
                         src="https://www.youtube.com/embed/SObbWdDaWJ0" frameborder="0" allowfullscreen></iframe>
@@ -89,7 +93,8 @@
                     <iframe class="carousel-video" src="https://www.youtube.com/embed/Pgyje5qXd_I" frameborder="0"
                         allowfullscreen></iframe>
                     <div class="video-carousel-text">
-                        <a class="vw5 hover-link" style="text-align: center;" href="https://www.youtube.com/@blackroyaltykingdom" target="_blank">Black Royalty</a>
+                        <a class="vw5 hover-link" style="text-align: center;"
+                            href="https://www.youtube.com/@blackroyaltykingdom" target="_blank">Black Royalty</a>
                         <span class="vw2p5" style="color: grey; text-align: center;">Video Editor</span>
                         <br>
                         <span class="vw1p25" style="text-align: center; width: 60%;">Video Editor for Black Royalty
@@ -98,11 +103,7 @@
                 </div>
             </div>
         </div>
-
-
     </div>
-
-
 </body>
 
 </html>

@@ -65,12 +65,23 @@ html {
     font-family: 'Pixel-Font';
     font-size: 14vw;
     user-select: none;
+    transition: transform .3s ease;
+}
+
+.fullName:hover {
+    transform: translateX(-50%) scale(1.05) rotate(-2deg);
+    transition: transform .25s ease;
+}
+
+.fullName:active {
+    transform: translateX(-50%) scale(0.95) rotate(2deg);
+    transition: transform .125s ease;
 }
 
 .tapScreen {
-    position: fixed;
+    position: absolute;
     text-align: center;
-    top: -25vh;
+    top: 5vh;
     left: 50%;
     width: 100%;
     transform: translateX(-50%);
