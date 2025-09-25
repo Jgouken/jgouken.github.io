@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jgouken</title>
     <link rel="stylesheet" href="styles.css">
-        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="script.js"></script>
 </head>
 
@@ -43,9 +43,8 @@
             <div class="groundLine" id="groundLine"></div>
             <div class="groundLine2" id="groundLine2"></div>
         </div>
-        <div class="vw5" x-text="new Date().getHours() < 12 ? 'Good Morning' : (new Date().getHours() < 18 ? 'Good Afternoon' : 'Good Evening')"
-            style="z-index: 10; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: max-content; text-align: center; pointer-events: none; font-family: Pixel-Font; color: white; top: 101vh;">WHY HELLO HELLO!</div>
-
+        <div class="vw5" x-data="{ greeting: new Date().getHours() < 12 ? 'Good Morning'.toLocaleUpperCase() : (new Date().getHours() < 18 ? 'Good Afternoon'.toLocaleUpperCase() : 'Good Evening'.toLocaleUpperCase()) }" x-text="greeting"
+            style="z-index: 10; position: absolute; left: 50%; transform: translateX(-50%); width: max-content; text-align: center; pointer-events: none; font-family: Pixel-Font; color: white; top: 101vh;">WHY HELLO HELLO!</div>
         <div class="video-introduction" style="margin-top: 15vh;">
             <div class="carousel-introductions" style="display: grid; grid-template-rows: 1fr 1fr 1fr;">
                 <div class="carousel-introduction0 video-showcase carousel-introduction">
