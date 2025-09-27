@@ -43,7 +43,7 @@
             <div class="groundLine" id="groundLine"></div>
             <div class="groundLine2" id="groundLine2"></div>
         </div>
-        <div class="vw5" x-data="{ greeting: new Date().getHours() < 12 ? 'Good Morning'.toLocaleUpperCase() : (new Date().getHours() < 18 ? 'Good Afternoon'.toLocaleUpperCase() : 'Good Evening'.toLocaleUpperCase()) }" x-text="greeting"
+        <div class="vw5" x-data="{ greeting: (new Date().getHours() > 0 && new Date().getHours() < 6) ? 'GET SOME SLEEP!'.toLocaleUpperCase() : (new Date().getHours() < 12 && new Date().getHours() > 6) ? 'Good Morning!'.toLocaleUpperCase() : (new Date().getHours() < 18 ? 'Good Afternoon!'.toLocaleUpperCase() : 'Good Evening!'.toLocaleUpperCase()) }" x-text="greeting"
             style="z-index: 10; position: absolute; left: 50%; transform: translateX(-50%); width: max-content; text-align: center; pointer-events: none; font-family: Pixel-Font; color: white; top: 101vh;">WHY HELLO HELLO!</div>
         <div class="video-introduction" style="margin-top: 15vh;">
             <div class="carousel-introductions" style="display: grid; grid-template-rows: 1fr 1fr 1fr;">
@@ -53,14 +53,14 @@
                             href="https://glitchedlizard.itch.io/casino-casualty" target="_blank">CASINO CASUALTY</a>
                         <span class="vw2p5" style="color: grey; text-align: center;">Voice Actor</span>
                         <br>
-                        <span class="vw1p25" style="text-align: center; width: 60%;">Voice Acted for CASINO CASUALTY, a
-                            FNAF-style indie horror title.</span>
+                        <span class="vw1p25" style="text-align: center; width: 60%;">Voice Acted as "Red Rover" for CASINO CASUALTY, a
+                            FNAF-inspired point-n-click indie survival horror.</span>
                     </div>
                     <iframe class="carousel-video video-showcase-reverse"
                         src="https://www.youtube.com/embed/n5hYEt1yBqc" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="carousel-introduction1 video-showcase carousel-introduction">
-                    <iframe class="carousel-video" src="https://www.youtube.com/embed/YiXUyxCH73o" frameborder="0"
+                    <iframe class="carousel-video" src="https://www.youtube.com/embed/hGZBaGfTlfg" frameborder="0"
                         allowfullscreen></iframe>
                     <div class="video-carousel-text">
                         <a class="vw5 hover-link" style="text-align: center;" href="https://www.youtube.com/@jgmp3"
