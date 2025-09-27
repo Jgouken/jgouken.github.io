@@ -43,7 +43,7 @@
             <div class="groundLine" id="groundLine"></div>
             <div class="groundLine2" id="groundLine2"></div>
         </div>
-        <div class="vw5" x-data="{ greeting: (new Date().getHours() > 0 && new Date().getHours() < 6) ? 'GET SOME SLEEP!'.toLocaleUpperCase() : (new Date().getHours() < 12 && new Date().getHours() > 6) ? 'Good Morning!'.toLocaleUpperCase() : (new Date().getHours() < 18 ? 'Good Afternoon!'.toLocaleUpperCase() : 'Good Evening!'.toLocaleUpperCase()) }" x-text="greeting"
+        <div class="vw5" x-data="{ greeting: (new Date().getHours() > 0 && new Date().getHours() < 6) ? 'GET SOME SLEEP!'.toLocaleUpperCase() : (new Date().getHours() < 12 && new Date().getHours() >= 6) ? 'Good Morning!'.toLocaleUpperCase() : (new Date().getHours() < 18 ? 'Good Afternoon!'.toLocaleUpperCase() : 'Good Evening!'.toLocaleUpperCase()) }" x-text="greeting"
             style="z-index: 10; position: absolute; left: 50%; transform: translateX(-50%); width: max-content; text-align: center; pointer-events: none; font-family: Pixel-Font; color: white; top: 101vh;">WHY HELLO HELLO!</div>
         <div class="video-introduction" style="margin-top: 15vh;">
             <div class="carousel-introductions" style="display: grid; grid-template-rows: 1fr 1fr 1fr;">
