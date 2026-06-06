@@ -7,7 +7,7 @@
     <title>Jgouken</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -16,6 +16,11 @@
             <div class="tapScreen" id="tapScreen" style="opacity: 0.5;">TAP/CLICK THE SCREEN</div>
             <div class="fullName" id="fullName">
                 JGOUKEN
+                <div
+                    x-data="{ greeting: (new Date().getHours() > 0 && new Date().getHours() < 6) ? 'GET SOME SLEEP!'.toLocaleUpperCase() : (new Date().getHours() < 12 && new Date().getHours() >= 6) ? 'Good Morning!'.toLocaleUpperCase() : (new Date().getHours() < 18 ? 'Good Afternoon!'.toLocaleUpperCase() : 'Good Evening!'.toLocaleUpperCase()) }"
+                    x-text="greeting"
+                    style="z-index: 10; position: absolute; left: 50%; transform: translateX(-50%); width: max-content; text-align: center; pointer-events: none; font-family: Pixel-Font; color: white; font-size: 1.25rem; margin-top: 0.5rem;">
+                    WHY HELLO HELLO!</div>
             </div>
             <img class="arrow" id="arrow1" src="/images/arrow.png">
             <img class="arrow" id="arrow2" src="/images/arrow.png">
@@ -43,67 +48,53 @@
             <div class="groundLine" id="groundLine"></div>
             <div class="groundLine2" id="groundLine2"></div>
         </div>
-        <div class="vw5" x-data="{ greeting: (new Date().getHours() > 0 && new Date().getHours() < 6) ? 'GET SOME SLEEP!'.toLocaleUpperCase() : (new Date().getHours() < 12 && new Date().getHours() >= 6) ? 'Good Morning!'.toLocaleUpperCase() : (new Date().getHours() < 18 ? 'Good Afternoon!'.toLocaleUpperCase() : 'Good Evening!'.toLocaleUpperCase()) }" x-text="greeting"
-            style="z-index: 10; position: absolute; left: 50%; transform: translateX(-50%); width: max-content; text-align: center; pointer-events: none; font-family: Pixel-Font; color: white; top: 101vh;">WHY HELLO HELLO!</div>
-        <div class="video-introduction" style="margin-top: 15vh;">
-            <div class="carousel-introductions" style="display: grid; grid-template-rows: 1fr 1fr 1fr;">
-                <div class="carousel-introduction0 video-showcase carousel-introduction">
-                    <div class="video-carousel-text2">
-                        <a class="vw5 hover-link" style="text-align: center;"
-                            href="https://glitchedlizard.itch.io/casino-casualty" target="_blank">CASINO CASUALTY</a>
-                        <span class="vw2p5" style="color: grey; text-align: center;">Voice Actor</span>
-                        <br>
-                        <span class="vw1p25" style="text-align: center; width: 60%;">Voice Acted as "Red Rover" for CASINO CASUALTY, a
-                            FNAF-inspired point-n-click indie survival horror.</span>
-                    </div>
-                    <iframe class="carousel-video video-showcase-reverse"
-                        src="https://www.youtube.com/embed/n5hYEt1yBqc" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="carousel-introduction1 video-showcase carousel-introduction">
-                    <iframe class="carousel-video" src="https://www.youtube.com/embed/hGZBaGfTlfg" frameborder="0"
-                        allowfullscreen></iframe>
-                    <div class="video-carousel-text">
-                        <a class="vw5 hover-link" style="text-align: center;" href="https://www.youtube.com/@jgmp3"
-                            target="_blank">JaM</a>
-                        <span class="vw2p5" style="color: grey; text-align: center;">Co-Producer</span>
-                        <br>
-                        <span class="vw1p25" style="text-align: center; width: 60%;">Electronic Dance Music Co-Producer
-                            on a small YouTube channel.</span>
-                    </div>
-                </div>
-                <div class="carousel-introduction2 video-showcase carousel-introduction">
-                    <div class="video-carousel-text2">
-                        <a class="vw5 hover-link" style="text-align: center;" href="https://rhythmdr.com/"
-                            target="_blank">Rhythm Doctor</a>
-                        <span class="vw2p5" style="color: grey; text-align: center;">Community Programmer</span>
-                        <br>
-                        <span class="vw1p25" style="text-align: center; width: 60%;">Custom Level Creator and Community
-                            Programmer for <a href="https://discord.com/invite/rhythmdr" target="_blank"
-                                style="color: white;">Rhythm Doctor's Discord Server</a> and <a
-                                href="https://rhythm.cafe/" target="_blank"
-                                style="color: white;">rhythm.cafe</a>.</span>
-                        <span class="vw1" style="text-align: center; width: 60%; color: gray;">* Not affiliated with
-                            Rhythm Doctor or 7BG.</span>
-                    </div>
-                    <iframe class="carousel-video video-showcase-reverse"
-                        src="https://www.youtube.com/embed/SObbWdDaWJ0" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="carousel-introduction3 video-showcase carousel-introduction">
-                    <iframe class="carousel-video" src="https://www.youtube.com/embed/Pgyje5qXd_I" frameborder="0"
-                        allowfullscreen></iframe>
-                    <div class="video-carousel-text">
-                        <a class="vw5 hover-link" style="text-align: center;"
-                            href="https://www.youtube.com/@blackroyaltykingdom" target="_blank">Black Royalty</a>
-                        <span class="vw2p5" style="color: grey; text-align: center;">Video Editor</span>
-                        <br>
-                        <span class="vw1p25" style="text-align: center; width: 60%;">Video Editor for Black Royalty
-                            Kingdom and its affiliates.</span>
-                    </div>
-                </div>
+
+        <div class="full-width-tabs">
+            <div class="tabs-grid">
+                <a class="tab" href="#musicPortfolio">Description</a>
+                <a class="tab" href="#musicPortfolio">Resume</a>
+                <a class="tab" href="#musicPortfolio">Programs</a>
+                <a class="tab" href="#musicPortfolio">Music</a>
+                <a class="tab" href="#musicPortfolio">Games</a>
             </div>
+        </div>
+
+        <div class="fullbody">
+            <div class="description">
+                <p>Site under construction!</p>
+            </div>
+
+            <div class="music-portfolio" id="musicPortfolio">
+                <canvas id="oscilloscopeCanvas" class="oscilloscope"></canvas>
+                <div class="portfolio-overlay">
+                    <div class="description"
+                        style="font-size: 1.5rem; font-weight: bold; text-align: center; margin-bottom: 0;">
+                        How about a little music?
+                    </div>
+                    <div class="portfolio-carousel">
+                        <button class="carousel-nav prev" id="prevTrack" aria-label="Previous track">◄</button>
+                        <div class="carousel-card">
+                            <div class="track-badge" id="trackBadge">TRACK 1</div>
+                            <h3 id="trackTitle">TRACK TITLE</h3>
+                            <p id="trackArtist">Jgouken</p>
+                            <p id="trackDesc">"Wow! You're really good!"</p>
+                        </div>
+                        <button class="carousel-nav next" id="nextTrack" aria-label="Next track">►</button>
+                    </div>
+                    <div class="music-player-container">
+                        <div class="music-player-bar" id="musicPlayerBar">
+                            <button id="playPauseBtn" class="play-pause">Play</button>
+                            <input id="seekBar" class="seek-bar" type="range" min="0" max="100" value="0" step="0.1"
+                                aria-label="Seek track">
+                            <div class="player-time" id="playerTime">0:00 / 0:00</div>
+                        </div>
+                    </div>
+                </div>
+                <audio id="musicPlayer" preload="metadata"></audio>
+            </div>
+
         </div>
     </div>
 </body>
 
 </html>
-</div>

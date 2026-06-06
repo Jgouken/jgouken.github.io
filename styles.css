@@ -50,7 +50,7 @@ html {
     z-index: 1;
     text-align: center;
     background: RGBA(100, 57, 0, 1);
-    background: linear-gradient(0deg, rgba(100, 57, 0, 0), rgba(100, 57, 0, 1) 30%, rgba(100, 57, 0, 1));
+    background: linear-gradient(0deg, black, rgba(100, 57, 0, 1) 30%, rgba(100, 57, 0, 1));
     overflow-x: hidden;
     user-select: none;
 }
@@ -106,151 +106,265 @@ html {
     user-select: none;
 }
 
-.video-introduction {
-    color: white;
+
+/* Full-width responsive tabs */
+.full-width-tabs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
     position: absolute;
     top: 100vh;
-    width: 100vw;
-    z-index: 0;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Pixel-Font';
-    font-size: 5vw;
-
-    @media (orientation: portrait) {
-        top: 110vh;
-    }
-}
-
-.video-showcase {
+    left: 0;
     width: 100%;
-    height: 25vw;
-    z-index: 1;
-    text-align: center;
-    background-color: black;
-    overflow-x: hidden;
 }
 
-.video-showcase-reverse {
-    @media (orientation: portrait) {
-        transform: scaleY(-1);
-    }
-}
-
-.carousel-introduction {
+.tabs-grid {
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     align-items: center;
-    gap: 2vw;
-    overflow: hidden;
-
-    @media (orientation: portrait) {
-        grid-template-columns: none;
-        grid-template-rows: 1fr 1fr;
-        height: 100vw;
-        justify-items: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
 }
 
-.carousel-introduction0 {
-    background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('https://img.itch.zone/aW1nLzIzMTk4NzE2LnBuZw==/original/IXWpQ6.png');
-    background-position: center center;
-
-    @media (orientation: portrait) {
-        transform: scaleY(-1);
-    }
-}
-
-.carousel-introduction1 {
-    background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 1)), url('/images/jam.png');
-    background-position: center center;
-}
-
-.carousel-introduction2 {
-    background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('/images/rhythmdoctor.png');
-    background-position: center center;
-
-    @media (orientation: portrait) {
-        transform: scaleY(-1);
-    }
-}
-
-.carousel-introduction3 {
-    background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 1)), url('/images/blackroyaltybanner.jpg');
-    background-position: center center;
-}
-
-.carousel-video {
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    width: 40vw;
-    height: 22vw;
-    display: block;
-    margin-left: 10%;
-
-    @media (orientation: portrait) {
-        margin-left: 0%;
-        width: 80vw;
-        height: 44vw;
-    }
-}
-
-.video-carousel-text {
-    display: flex;
-    flex-direction: column;
+.tab {
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border-top: 10px solid rgba(255, 255, 255, 0.08);
+    color: #fff;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: clamp(0.9rem, 2vw, 4rem);
+    text-align: center;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    margin-left: -10%;
-
-    @media (orientation: portrait) {
-        margin-left: 0%;
-    }
+    transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    text-decoration: none;
+    font-family: 'Pixel-Font';
 }
 
-.video-carousel-text2 {
+.tab:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.fullbody {
+    position: absolute;
+    top: 120vh;
+    left: 0;
+    z-index: 5;
+    font-family: 'Pixel-Font';
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    width: 100%;
+    gap: 16px;
+}
+
+.description {
+    background-position: center center;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-left: 10%;
-
-    @media (orientation: portrait) {
-        margin-left: 0%;
-        transform: scaleY(-1);
-    }
-}
-
-.hover-link {
-    text-decoration: underline;
-    text-decoration-color: rgba(0, 0, 0, 0);
     color: white;
-    transition: text-decoration-color .3s ease;
+    align-items: center;
+    justify-content: center;
 }
 
-.hover-link:hover {
-    text-decoration-color: rgb(255, 255, 255);
-    transition: text-decoration-color .3s ease;
+.music-portfolio {
+    position: relative;
+    min-height: 60vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+    transition: all 1s ease;
 }
 
+.music-portfolio::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.35) 40%, rgba(0, 0, 0, 0.85));
+    z-index: 0;
+    height: 100%;
+}
 
+.oscilloscope {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 1;
+}
 
+.portfolio-overlay {
+    position: relative;
+    z-index: 2;
+    width: min(1100px, 94vw);
+    padding: 2rem;
+    display: grid;
+    gap: 1.5rem;
+    backdrop-filter: blur(4px);
+}
 
+.portfolio-header {
+    display: grid;
+    gap: 0.5rem;
+    text-align: center;
+}
 
+.portfolio-header h2 {
+    margin: 0;
+    font-family: 'Pixel-Font';
+    font-size: 4vw;
+}
 
+.portfolio-header p {
+    margin: 0;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.portfolio-carousel {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.carousel-nav {
+    border: 0px;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+}
+
+.carousel-card {
+    flex: 1 1 320px;
+    min-width: 260px;
+    padding: 1.75rem;
+    background: rgba(0, 0, 0, 0.5);
+    display: grid;
+    gap: 0.75rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+.track-badge {
+    font-family: 'Pixel-Font';
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgb(255, 60, 0);
+}
+
+.carousel-card h3,
+.carousel-card p {
+    margin: 0;
+}
+
+.carousel-card h3 {
+    font-size: 3.2rem;
+}
+
+.music-player-container {
+    position: relative;
+}
+
+.music-player-bar {
+    width: min(100%, 820px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto minmax(280px, 1fr) auto;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.9rem 1rem;
+    background: rgba(0, 0, 0, 0.603);
+    backdrop-filter: blur(6px);
+    transition: all 1s ease;
+    position: relative;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+.play-pause {
+    min-width: 5.5rem;
+    padding: 0.7rem 1rem;
+    border: 3px solid rgb(255, 60, 0);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-family: 'Pixel-Font';
+    cursor: pointer;
+}
+
+.player-time {
+    font-family: 'Pixel-Font';
+    font-size: 1rem;
+    text-align: center;
+    color: #d8d8ff;
+    min-width: 7.5rem;
+    width: 7.5rem;
+}
+
+.seek-bar {
+    width: 100%;
+    max-width: 560px;
+    appearance: none;
+    height: 0.9rem;
+    background: linear-gradient(90deg, rgb(255, 119, 119) 0%, rgb(255, 60, 0) 0%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
+    outline: none;
+    cursor: pointer;
+}
+
+.seek-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    background: rgb(255, 60, 0);
+    cursor: pointer;
+}
+
+@media (max-width: 720px) {
+    .portfolio-header h2 {
+        font-size: 7vw;
+    }
+
+    .carousel-card h3 {
+        font-size: 2.5rem;
+    }
+
+    .music-player-bar {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .player-time {
+        order: 3;
+    }
+
+    .play-pause {
+        order: 2;
+    }
+
+    .seek-bar {
+        min-width: 100%;
+    }
+}
 
 .vw5 {
     font-size: 5vw;
